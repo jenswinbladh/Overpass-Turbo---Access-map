@@ -1,0 +1,29 @@
+(
+ way[highway]({{bbox}} ) ;
+  way["cycleway:left"]({{bbox}});
+  way["cycleway:right"]({{bbox}});
+  way["bicycle"~"yes|designated|"]({{bbox}});
+  way["highway"="cycleway"]({{bbox}});
+  );
+out body;
+>;
+out skel qt;
+  
+ 	
+
+
+{{style:
+
+way[highway=primary]{ color:brown; width:6; }
+way[highway=secondary]{ color:brown; width:5; }
+way[highway=tertiary]{ color:brown; width:4; }
+way[highway=~/(unclassified|residential|service|pedestrian)/]{ color:brown; width:3; }
+way[highway=~/(cycleway|path|track)/]{ color:brown; width:3; }
+way[cycleway=~/("cycleway:left"|"cycleway:right"|lane)/]{ color:brown; width:3; }
+way[highway=~/(footway|steps)/]{ color:black; width:3;}
+way[bicycle=~/(no|private)/]{ color:black; width:3;}
+way[bicycle=~/(yes|designated)/]{ color:brown; width:3;}
+
+
+
+}}
