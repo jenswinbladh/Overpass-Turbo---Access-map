@@ -14,16 +14,15 @@ out skel qt;
 
 {{style:
 
-way[highway=primary]{ color:brown; width:6; }
-way[highway=secondary]{ color:brown; width:5; }
-way[highway=tertiary]{ color:brown; width:4; }
-way[highway=~/(unclassified|residential|service|pedestrian)/]{ color:brown; width:3; }
+way[highway=~/(primary|trunk|primary_link)/]{ color:brown; width:6; }
+way[highway=~/(secondary|trunk|secondary_link)/]{ color:brown; width:5; }
+way[highway=~/(tertiary|trunk|tertiary_link)/]{ color:brown; width:4; }
+way[highway=~/(unclassified|residential|service|pedestrian|living_street)/]{ color:brown; width:3; }
 way[highway=~/(cycleway|path|track)/]{ color:brown; width:3; }
 way[cycleway=~/("cycleway:left"|"cycleway:right"|lane)/]{ color:brown; width:3; }
 way[highway=~/(footway|steps)/]{ color:black; width:3;}
 way[bicycle=~/(no|private)/]{ color:black; width:3;}
 way[bicycle=~/(yes|designated)/]{ color:brown; width:3;}
-
-
+way[access=~/(no|privat)/]{ color:brown; width:3;}
 
 }}
